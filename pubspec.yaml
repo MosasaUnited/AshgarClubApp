@@ -1,0 +1,134 @@
+name: shagra_club_app
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  # State Management
+  flutter_bloc: ^8.1.6
+
+  #code generator (mainly used with cubit and bloc )
+  freezed: ^2.5.7
+
+  #annotation for the freezed code generator
+  freezed_annotation: ^2.4.4
+
+  #Localization
+  intl: ^0.19.0
+  easy_localization: ^3.0.7
+
+  #app icon
+  flutter_launcher_icons: ^0.13.1
+
+  # An SVG rendering and widget library which allows painting and displaying Scalable Vector Graphics 1.1 files.
+  flutter_svg: ^2.0.10+1
+
+  # for adapting screens and font size
+  flutter_screenutil: ^5.9.3
+
+  # Screens Routes
+  go_router: ^14.1.4
+
+  # Shimmer Effect
+  shimmer: ^3.0.0
+
+  # Lottie Files
+  lottie: ^3.1.2
+
+  # Toast
+  fluttertoast: ^8.2.1
+
+  # Pick Image from Gallery and Camera
+  image_picker: ^1.1.2
+
+  # Image Caching
+  cached_network_image: ^3.2.3
+
+  # Flutter plugin for reading and writing simple key-value pairs. Wraps NSUserDefaults on iOS and SharedPreferences on Android.
+  shared_preferences: ^2.2.3
+
+  #Splash Screen
+  flutter_native_splash: ^2.4.0
+
+  #Google Fonts
+  google_fonts: ^6.2.1
+
+  # Links Launcher
+  url_launcher: ^6.3.0
+
+  # Device Preview for Flutter
+  device_preview: ^1.2.0
+
+  #To Give Access for Other Features On Mobile Inside The App
+  permission_handler: ^11.3.1
+
+  #Linter
+  flutter_lints: ^4.0.0
+
+
+
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/fonts/
+    - assets/icons/
+    - assets/images/
+    - assets/lottie/
+    - assets/svg/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+   - family: Cairo
+     fonts:
+       - asset: assets/fonts/Cairo-Regular.ttf
+       - asset: assets/fonts/Cairo-Bold.ttf
+       - asset: assets/fonts/Cairo-Medium.ttf
+         weight: 700
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
