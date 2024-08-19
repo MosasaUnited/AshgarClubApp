@@ -1,28 +1,29 @@
+import '../../../../core/constants/lottie_assets.dart';
 import '../models/onboarding_model.dart';
 
 List<OnboardingModel> onBoardingList = [
   OnboardingModel(
-    title: 'شركة الخدمات الطبية',
+    title: 'Your Club, Your App',
     image: LottieAssets.onBoardingImageOne,
     body:
-        'شركة الخدمات الطبية الشريك الدائم لشركة الأسكندرية للتوزيع لتقديم الرعاية الصحية المتكاملة ',
+        'Welcome To The Ashgar Club App, your all-in-one solution for a seamless club Experience',
   ),
   OnboardingModel(
-    title: 'الرعاية الشاملة',
+    title: 'Manage, Book, and Stay Informed',
     image: LottieAssets.onBoardingImageTwo,
     body:
-        'تقوم الشركة بالفحوصات الطبية اللازمة و الدورية و الطارئة للعاملين و السادة المحالين للمعاش  ',
+        'Easily manage your membership, book your favorite activities and classes, and stay updated with club News and Events',
   ),
   OnboardingModel(
-    title: 'الأدوية',
+    title: 'Secure, Active, Connected',
     image: LottieAssets.onBoardingImageThree,
     body:
-        ' تتعاون شركة الخدمات الطبية مع صيدليات مميزة لتوفير الأدوية للعاملين و المعاشات و بأسعار مخفضة لأسرهم',
+        'Securely handle payments, track your fitness journey, and connect with the club community',
   ),
   OnboardingModel(
-    title: 'العمليات الجراحية',
+    title: 'Get Started Today',
     image: LottieAssets.onBoardingImageFour,
     body:
-        'فى حال احتاج المريض لعملية جراحية نتعاون مع أفضل المستشفيات و المراكز الطبية لإجراء العملية المطلوبة',
+        'Get Started in minutes and experience the future of club membership by downloading now and enjoying the app',
   ),
 ];

@@ -36,13 +36,17 @@ class CustomSliderOnboarding extends StatelessWidget {
                           children: [
                             Text(
                               onBoardingList[index].title!,
-                              style: TextStyle(fontSize: 24.sp),
+                              style: TextStyle(
+                                fontSize: 24.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                             Lottie.asset(
                               onBoardingList[index].image!,
                               height: 250.h,
                               width: 250.w,
                               fit: BoxFit.contain,
+                              repeat: false,
                             ),
                             SizedBox(
                               height: 20.h,
@@ -71,13 +75,13 @@ class CustomSliderOnboarding extends StatelessWidget {
                       CustomButton(
                         backgroundColor:
                             cubit.currentPage == onBoardingList.length - 1
-                                ? Colors.redAccent
+                                ? const Color(0xff2d6a4f)
                                 : MyColors.appColor,
                         textColor: Colors.white,
                         // text: 'Continue',
                         text: cubit.currentPage == onBoardingList.length - 1
-                            ? 'تسجيل الدخول'
-                            : 'الـتـالـى',
+                            ? 'Login Now'
+                            : 'Next',
                         onPressed: () {
                           cubit.next(context);
                         },
