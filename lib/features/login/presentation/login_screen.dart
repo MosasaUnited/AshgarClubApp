@@ -28,10 +28,10 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               children: [
                 Text(
-                  'أهلا بيك مرة تانية',
+                  'Welcome Back',
                   textDirection: TextDirection.rtl,
                   style: Styles.textStyle30.copyWith(
-                      color: MyColors.appColor,
+                      color: MyColors.secondaryColor,
                       fontWeight: FontWeightHelper.extraBold),
                 ),
                 SizedBox(
@@ -50,13 +50,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Column(
                     children: [
                       const AppTextFormField(
-                        hintText: 'أدخل السركى أو رقم الملف الطبى',
+                        hintText: 'ُPhone Number',
                       ),
                       SizedBox(
                         height: 18.h,
                       ),
                       AppTextFormField(
-                        hintText: 'كلمة السر',
+                        hintText: 'Password',
                         isObscureText: isObscureText,
                         suffixIcon: GestureDetector(
                           onTap: () {
@@ -75,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 24.h,
                       ),
                       AppTextButton(
-                        buttonText: 'دخـــــــــــول',
+                        buttonText: 'Login',
                         textStyle: Styles.textStyle16.copyWith(
                             color: Colors.white, fontWeight: FontWeight.w700),
                         onPressed: () {
@@ -88,23 +88,23 @@ class _LoginScreenState extends State<LoginScreen> {
                       Row(
                         children: [
                           Align(
-                            alignment: AlignmentDirectional.centerStart,
-                            child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'أطلب كلمة سر جديدة',
-                                style: Styles.textStyle12.copyWith(
-                                  color: MyColors.appColor,
-                                ),
-                              ),
+                            alignment: AlignmentDirectional.centerEnd,
+                            child: Text(
+                              'Forget Password ?',
+                              style: Styles.textStyle12,
                             ),
                           ),
                           const Spacer(),
                           Align(
-                            alignment: AlignmentDirectional.centerEnd,
-                            child: Text(
-                              'نسيت كلمة السر ؟',
-                              style: Styles.textStyle12,
+                            alignment: AlignmentDirectional.centerStart,
+                            child: TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                'Click Here',
+                                style: Styles.textStyle12.copyWith(
+                                  color: MyColors.secondaryColor,
+                                ),
+                              ),
                             ),
                           ),
                         ],
@@ -112,23 +112,23 @@ class _LoginScreenState extends State<LoginScreen> {
                       Row(
                         children: [
                           Align(
-                            alignment: AlignmentDirectional.centerStart,
-                            child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'إضغط هنا للتسجيل',
-                                style: Styles.textStyle12.copyWith(
-                                  color: MyColors.appColor,
-                                ),
-                              ),
+                            alignment: AlignmentDirectional.centerEnd,
+                            child: Text(
+                              'New Member ? ',
+                              style: Styles.textStyle12,
                             ),
                           ),
                           const Spacer(),
                           Align(
-                            alignment: AlignmentDirectional.centerEnd,
-                            child: Text(
-                              'ليس لديك حساب ؟ ',
-                              style: Styles.textStyle12,
+                            alignment: AlignmentDirectional.centerStart,
+                            child: TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                'Register Now',
+                                style: Styles.textStyle12.copyWith(
+                                  color: MyColors.secondaryColor,
+                                ),
+                              ),
                             ),
                           ),
                         ],

@@ -75,7 +75,7 @@ class CustomSliderOnboarding extends StatelessWidget {
                       CustomButton(
                         backgroundColor:
                             cubit.currentPage == onBoardingList.length - 1
-                                ? const Color(0xff2d6a4f)
+                                ? MyColors.secondaryColor
                                 : MyColors.appColor,
                         textColor: Colors.white,
                         // text: 'Continue',
