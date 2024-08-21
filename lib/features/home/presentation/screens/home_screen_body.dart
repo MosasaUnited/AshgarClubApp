@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shagra_club_app/core/theme/styles.dart';
 import 'package:shagra_club_app/core/widgets/simple_leading.dart';
 
 class HomeScreenBody extends StatelessWidget {
@@ -10,7 +11,11 @@ class HomeScreenBody extends StatelessWidget {
       appBar: AppBar(
         leading: const SimpleLeading(),
       ),
-      body: Container(),
+      body: Center(
+          child: Text(
+        'Home Screen',
+        style: Styles.textStyle30,
+      )),
     );
   }
 }

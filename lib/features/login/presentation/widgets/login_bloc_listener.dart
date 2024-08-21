@@ -3,9 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shagra_club_app/core/routes/app_router.dart';
 import 'package:shagra_club_app/core/theme/colors.dart';
-import 'package:shagra_club_app/core/theme/styles.dart';
 import 'package:shagra_club_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:shagra_club_app/features/login/logic/cubit/login_state.dart';
+
+import '../../../../core/theme/styles.dart';
 
 class LoginBlocListener extends StatelessWidget {
   const LoginBlocListener({super.key});
