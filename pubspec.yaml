@@ -50,6 +50,15 @@ dependencies:
   # Image Caching
   cached_network_image: ^3.2.3
 
+  #JSON
+  json_annotation: ^4.9.0
+
+  #Networking
+  dio: ^5.6.0
+  retrofit: ^4.2.0
+  pretty_dio_logger: ^1.4.0
+
+
   # Flutter plugin for reading and writing simple key-value pairs. Wraps NSUserDefaults on iOS and SharedPreferences on Android.
   shared_preferences: ^2.2.3
 
@@ -70,6 +79,9 @@ dependencies:
 
   #Linter
   flutter_lints: ^4.0.0
+
+  #Depndency Injection
+  get_it: ^7.7.0
 
 
 

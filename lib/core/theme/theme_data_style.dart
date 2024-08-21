@@ -27,7 +27,7 @@ class ThemeDataStyle {
     ),
     fontFamily: 'Cairo',
     colorScheme: ColorScheme.dark(
-      background: Colors.grey.shade900,
+      surface: Colors.grey.shade900,
       primary: Colors.deepPurple.shade500,
       secondary: Colors.deepPurple.shade700,
     ),

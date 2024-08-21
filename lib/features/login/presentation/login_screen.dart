@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shagra_club_app/features/login/logic/cubit/login_cubit.dart';
+import 'package:shagra_club_app/features/login/presentation/widgets/login_bloc_listener.dart';
+import 'package:shagra_club_app/features/login/presentation/widgets/mobile_and_password.dart';
 
 import '../../../core/constants/image_assets.dart';
 import '../../../core/theme/colors.dart';
 import '../../../core/theme/font_weight_helper.dart';
 import '../../../core/theme/styles.dart';
 import '../../../core/widgets/app_text_button.dart';
-import '../../../core/widgets/app_text_form_field.dart';
+import '../data/models/login_request_body.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  final formKey = GlobalKey<FormState>();
-  bool isObscureText = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Text(
                   'Welcome Back',
-                  textDirection: TextDirection.rtl,
+                  textDirection: TextDirection.ltr,
                   style: Styles.textStyle30.copyWith(
                       color: MyColors.secondaryColor,
                       fontWeight: FontWeightHelper.extraBold),
@@ -45,96 +42,74 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 10.h,
                 ),
-                Form(
-                  key: formKey,
-                  child: Column(
-                    children: [
-                      const AppTextFormField(
-                        hintText: 'ُPhone Number',
-                      ),
-                      SizedBox(
-                        height: 18.h,
-                      ),
-                      AppTextFormField(
-                        hintText: 'Password',
-                        isObscureText: isObscureText,
-                        suffixIcon: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              isObscureText = !isObscureText;
-                            });
-                          },
-                          child: Icon(
-                            isObscureText
-                                ? Icons.visibility_off
-                                : Icons.visibility,
+                Column(
+                  children: [
+                    const MobileAndPassword(),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    AppTextButton(
+                      buttonText: 'Login',
+                      textStyle: Styles.textStyle16.copyWith(
+                          color: Colors.white, fontWeight: FontWeight.w700),
+                      onPressed: () {
+                        validateThenDoLogin(context);
+                        // GoRouter.of(context).push(AppRouter.kHome);
+                      },
+                    ),
+                    const LoginBlocListener(),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    Row(
+                      children: [
+                        Align(
+                          alignment: AlignmentDirectional.centerEnd,
+                          child: Text(
+                            'Forget Password ?',
+                            style: Styles.textStyle12,
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 24.h,
-                      ),
-                      AppTextButton(
-                        buttonText: 'Login',
-                        textStyle: Styles.textStyle16.copyWith(
-                            color: Colors.white, fontWeight: FontWeight.w700),
-                        onPressed: () {
-                          // GoRouter.of(context).push(AppRouter.kChooseClinic);
-                        },
-                      ),
-                      SizedBox(
-                        height: 20.h,
-                      ),
-                      Row(
-                        children: [
-                          Align(
-                            alignment: AlignmentDirectional.centerEnd,
+                        const Spacer(),
+                        Align(
+                          alignment: AlignmentDirectional.centerStart,
+                          child: TextButton(
+                            onPressed: () {},
                             child: Text(
-                              'Forget Password ?',
-                              style: Styles.textStyle12,
-                            ),
-                          ),
-                          const Spacer(),
-                          Align(
-                            alignment: AlignmentDirectional.centerStart,
-                            child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Click Here',
-                                style: Styles.textStyle12.copyWith(
-                                  color: MyColors.secondaryColor,
-                                ),
+                              'Click Here',
+                              style: Styles.textStyle12.copyWith(
+                                color: MyColors.secondaryColor,
                               ),
                             ),
                           ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Align(
-                            alignment: AlignmentDirectional.centerEnd,
-                            child: Text(
-                              'New Member ? ',
-                              style: Styles.textStyle12,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Align(
+                          alignment: AlignmentDirectional.centerEnd,
+                          child: Text(
+                            'New Member ? ',
+                            style: Styles.textStyle12,
                           ),
-                          const Spacer(),
-                          Align(
-                            alignment: AlignmentDirectional.centerStart,
-                            child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Register Now',
-                                style: Styles.textStyle12.copyWith(
-                                  color: MyColors.secondaryColor,
-                                ),
+                        ),
+                        const Spacer(),
+                        Align(
+                          alignment: AlignmentDirectional.centerStart,
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Register Now',
+                              style: Styles.textStyle12.copyWith(
+                                color: MyColors.secondaryColor,
                               ),
                             ),
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -142,5 +117,16 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
+  }
+
+  void validateThenDoLogin(BuildContext context) {
+    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+      context.read<LoginCubit>().emitLoginStates(
+            LoginRequestBody(
+              mobile: context.read<LoginCubit>().mobileController.text,
+              password: context.read<LoginCubit>().passwordController.text,
+            ),
+          );
+    }
   }
 }

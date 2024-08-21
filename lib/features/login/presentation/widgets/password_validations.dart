@@ -23,24 +23,24 @@ class PasswordValidations extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        buildValidationRow('على الأقل حرف واحد small', hasLowerCase),
+        buildValidationRow('at least 1 lowercase letter', hasLowerCase),
         SizedBox(
           height: 2.h,
         ),
-        buildValidationRow('على الأقل حرف واحد CAPITAL', hasUpperCase),
+        buildValidationRow('at least 1 UPPERCASE letter', hasUpperCase),
         SizedBox(
           height: 2.h,
         ),
         buildValidationRow(
-            'على الأقل حرف واحد خاص زى % # @', hasSpecialCharacter),
+            'at least 1 special character letter', hasSpecialCharacter),
         SizedBox(
           height: 2.h,
         ),
-        buildValidationRow('على الأقل رقم واحد', hasNumber),
+        buildValidationRow('at least 1 number', hasNumber),
         SizedBox(
           height: 2.h,
         ),
-        buildValidationRow('على الأقل 8 حروف', hasMinLength),
+        buildValidationRow('at least 8 character long', hasMinLength),
       ],
     );
   }
@@ -60,7 +60,7 @@ class PasswordValidations extends StatelessWidget {
           style: Styles.textStyle12.copyWith(
             fontSize: 13,
             fontWeight: FontWeight.normal,
-            color: hasValidated ? MyColors.myGrey : MyColors.myLightBlue,
+            color: hasValidated ? MyColors.myGrey : Colors.purple,
             decoration: hasValidated ? TextDecoration.lineThrough : null,
             decorationColor: Colors.green,
             decorationThickness: 2,
