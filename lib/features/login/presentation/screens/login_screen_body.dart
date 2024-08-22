@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shagra_club_app/core/widgets/title_text.dart';
 import 'package:shagra_club_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:shagra_club_app/features/login/presentation/widgets/forget_password.dart';
 import 'package:shagra_club_app/features/login/presentation/widgets/login_bloc_listener.dart';
@@ -9,8 +10,6 @@ import 'package:shagra_club_app/features/login/presentation/widgets/mobile_and_p
 
 import '../../../../core/constants/image_assets.dart';
 import '../../../../core/routes/app_router.dart';
-import '../../../../core/theme/colors.dart';
-import '../../../../core/theme/font_weight_helper.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import '../widgets/new_member_register.dart';
@@ -27,13 +26,7 @@ class LoginScreenBody extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Text(
-                  'Welcome Back',
-                  textDirection: TextDirection.ltr,
-                  style: Styles.textStyle30.copyWith(
-                      color: MyColors.secondaryColor,
-                      fontWeight: FontWeightHelper.extraBold),
-                ),
+                const TitleText(prefix: 'Welcome', title: 'Back'),
                 SizedBox(
                   height: 10.h,
                 ),

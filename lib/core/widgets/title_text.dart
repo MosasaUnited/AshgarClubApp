@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shagra_club_app/core/theme/colors.dart';
 
 class TitleText extends StatelessWidget {
   const TitleText({super.key, required this.prefix, required this.title});
@@ -16,8 +17,8 @@ class TitleText extends StatelessWidget {
         Text(
           prefix,
           style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                color: Colors.white,
-                fontSize: 20.sp,
+                color: MyColors.secondaryColor,
+                fontSize: 25.sp,
                 fontWeight: FontWeight.w900,
               ),
         ),
@@ -28,12 +29,13 @@ class TitleText extends StatelessWidget {
             ? ShaderMask(
                 shaderCallback: (bounds) {
                   return const LinearGradient(
-                      end: Alignment.centerRight,
-                      begin: Alignment.centerLeft,
-                      colors: [
-                        Colors.pink,
-                        Colors.cyanAccent,
-                      ]).createShader(bounds);
+                    end: Alignment.centerRight,
+                    begin: Alignment.centerLeft,
+                    colors: [
+                      Colors.pink,
+                      Colors.cyanAccent,
+                    ],
+                  ).createShader(bounds);
                 },
                 child: Text(
                   title,
@@ -44,13 +46,25 @@ class TitleText extends StatelessWidget {
                       ),
                 ),
               )
-            : Text(
-                title,
-                style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                      color: Colors.white,
-                      fontSize: 30.sp,
-                      fontWeight: FontWeight.w900,
-                    ),
+            : ShaderMask(
+                shaderCallback: (bounds) {
+                  return const LinearGradient(
+                    end: Alignment.centerRight,
+                    begin: Alignment.centerLeft,
+                    colors: [
+                      Colors.pink,
+                      Colors.cyanAccent,
+                    ],
+                  ).createShader(bounds);
+                },
+                child: Text(
+                  title,
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        color: Colors.white,
+                        fontSize: 27.sp,
+                        fontWeight: FontWeight.w900,
+                      ),
+                ),
               ),
       ],
     );

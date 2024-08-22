@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shagra_club_app/core/routes/app_router.dart';
 import 'package:shagra_club_app/core/widgets/app_text_button.dart';
+import 'package:shagra_club_app/core/widgets/title_text.dart';
 import 'package:shagra_club_app/features/signup/logic/sign_up_cubit.dart';
 import 'package:shagra_club_app/features/signup/presentation/widgets/already_have_account.dart';
 import 'package:shagra_club_app/features/signup/presentation/widgets/sign_up_bloc_listener.dart';
@@ -24,14 +25,15 @@ class SignUpScreenBody extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  'Welcome',
-                  textDirection: TextDirection.ltr,
-                  style: Styles.textStyle20.copyWith(
-                    fontSize: 24.sp,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
+                TitleText(prefix: 'Hi', title: 'New Member'),
+                // Text(
+                //   'Welcome',
+                //   textDirection: TextDirection.ltr,
+                //   style: Styles.textStyle20.copyWith(
+                //     fontSize: 24.sp,
+                //     fontWeight: FontWeight.w900,
+                //   ),
+                // ),
                 SizedBox(
                   height: 8.h,
                 ),
