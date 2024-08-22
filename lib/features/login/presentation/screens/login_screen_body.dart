@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shagra_club_app/features/login/logic/cubit/login_cubit.dart';
+import 'package:shagra_club_app/features/login/presentation/widgets/forget_password.dart';
 import 'package:shagra_club_app/features/login/presentation/widgets/login_bloc_listener.dart';
 import 'package:shagra_club_app/features/login/presentation/widgets/mobile_and_password.dart';
 
@@ -12,7 +13,7 @@ import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/font_weight_helper.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
-import '../../data/models/login_request_body.dart';
+import '../widgets/new_member_register.dart';
 
 class LoginScreenBody extends StatelessWidget {
   const LoginScreenBody({super.key});
@@ -71,54 +72,8 @@ class LoginScreenBody extends StatelessWidget {
                     SizedBox(
                       height: 20.h,
                     ),
-                    Row(
-                      children: [
-                        Align(
-                          alignment: AlignmentDirectional.centerEnd,
-                          child: Text(
-                            'Forget Password ?',
-                            style: Styles.textStyle12,
-                          ),
-                        ),
-                        const Spacer(),
-                        Align(
-                          alignment: AlignmentDirectional.centerStart,
-                          child: TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'Click Here',
-                              style: Styles.textStyle12.copyWith(
-                                color: MyColors.secondaryColor,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Align(
-                          alignment: AlignmentDirectional.centerEnd,
-                          child: Text(
-                            'New Member ? ',
-                            style: Styles.textStyle12,
-                          ),
-                        ),
-                        const Spacer(),
-                        Align(
-                          alignment: AlignmentDirectional.centerStart,
-                          child: TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'Register Now',
-                              style: Styles.textStyle12.copyWith(
-                                color: MyColors.secondaryColor,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    const ForgetPassword(),
+                    const NewMemberRegister(),
                   ],
                 ),
               ],
@@ -131,12 +86,7 @@ class LoginScreenBody extends StatelessWidget {
 
   void validateThenDoLogin(BuildContext context) {
     if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      context.read<LoginCubit>().emitLoginStates(
-            LoginRequestBody(
-              mobile: context.read<LoginCubit>().mobileController.text,
-              password: context.read<LoginCubit>().passwordController.text,
-            ),
-          );
+      context.read<LoginCubit>().emitLoginStates();
     }
   }
 }
