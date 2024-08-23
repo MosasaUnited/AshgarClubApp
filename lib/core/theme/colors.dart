@@ -9,4 +9,12 @@ class MyColors {
   static const Color myLightBlue = Color(0xff0666DF);
   static const Color myTeal = Color(0xff008080);
   static const Color myGreen = Color(0xff64BF75);
+
+  // Bottom Navigation Bar Colors
+//Colors
+  static const Color kColorBNBActiveTitleColor =
+      Color.fromARGB(255, 66, 66, 66);
+  static const Color kColorBNBDeactiveTitleColor =
+      Color.fromARGB(255, 144, 144, 144);
+  static const Color kColorBNBBackground = Color.fromARGB(255, 225, 255, 199);
 }

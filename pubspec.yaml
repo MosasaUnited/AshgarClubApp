@@ -83,6 +83,9 @@ dependencies:
   #Depndency Injection
   get_it: ^7.7.0
 
+  # Bottom Navigation Bar
+  persistent_bottom_nav_bar: ^6.2.1
+
 
 
   flutter:

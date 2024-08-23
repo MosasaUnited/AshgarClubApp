@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:shagra_club_app/core/theme/styles.dart';
 
-class HomeScreenBody extends StatelessWidget {
-  const HomeScreenBody({super.key});
+import '../../../../core/theme/styles.dart';
+
+class TrackingScreenBody extends StatelessWidget {
+  const TrackingScreenBody({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Center(
         child: Text(
-      'Home Screen',
+      'Tracking Screen',
       style: Styles.textStyle30,
     ));
   }

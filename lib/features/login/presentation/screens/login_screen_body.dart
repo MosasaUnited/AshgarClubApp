@@ -57,7 +57,7 @@ class LoginScreenBody extends StatelessWidget {
                             .formKey
                             .currentState!
                             .validate()) {
-                          GoRouter.of(context).push(AppRouter.kHome);
+                          GoRouter.of(context).push(AppRouter.kMainScreen);
                         }
                       },
                     ),

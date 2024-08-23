@@ -61,7 +61,7 @@ class TitleText extends StatelessWidget {
                   title,
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         color: Colors.white,
-                        fontSize: 27.sp,
+                        fontSize: 29.sp,
                         fontWeight: FontWeight.w900,
                       ),
                 ),

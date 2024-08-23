@@ -25,15 +25,7 @@ class SignUpScreenBody extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                TitleText(prefix: 'Hi', title: 'New Member'),
-                // Text(
-                //   'Welcome',
-                //   textDirection: TextDirection.ltr,
-                //   style: Styles.textStyle20.copyWith(
-                //     fontSize: 24.sp,
-                //     fontWeight: FontWeight.w900,
-                //   ),
-                // ),
+                const TitleText(prefix: 'Hi', title: 'New Member'),
                 SizedBox(
                   height: 8.h,
                 ),
