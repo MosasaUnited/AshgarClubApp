@@ -92,6 +92,9 @@ dependencies:
   # Image Slider
   carousel_slider: ^5.0.0
 
+  # Rating
+  flutter_rating_bar: ^4.0.1
+
 
 
 

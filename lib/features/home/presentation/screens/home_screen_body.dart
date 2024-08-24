@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shagra_club_app/core/widgets/custom_shader_mask_text.dart';
+import 'package:shagra_club_app/features/home/presentation/widgets/rating_bar.dart';
 
 import '../widgets/contact_us_button.dart';
 import '../widgets/image_slider_with_indicator.dart';
@@ -25,6 +26,11 @@ class HomeScreenBody extends StatelessWidget {
           ),
           const CustomShaderMaskText(text: 'Follow and Contact Us'),
           const ContactUsButtons(),
+          const CustomShaderMaskText(text: 'Rate your Club experience'),
+          SizedBox(
+            height: 10.h,
+          ),
+          const CustomRatingBar(),
         ],
       ),
     );

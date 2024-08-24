@@ -36,7 +36,7 @@ class ContactUsButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
-        bottom: 80.h,
+        bottom: 20.h,
       ), // Adapt for larger screens
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
