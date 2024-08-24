@@ -14,4 +14,10 @@ class IconAssets {
 
   // Exit Show Dialog
   static const String exit = 'assets/icons/exit_app.png';
+
+  // Contact US Icons
+  static const String emailIcon = 'assets/images/email1.png';
+  static const String facebookIcon = 'assets/images/facebook.png';
+  static const String instagramIcon = 'assets/images/instagram.png';
+  static const String whatsappIcon = 'assets/images/whatsapp.png';
 }

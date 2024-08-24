@@ -6,6 +6,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const HomeScreenBody();
+    return const SingleChildScrollView(child: HomeScreenBody());
   }
 }
