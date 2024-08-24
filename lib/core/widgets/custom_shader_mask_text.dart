@@ -28,6 +28,5 @@ class CustomShaderMaskText extends StatelessWidget {
             ),
       ),
     );
-    const Placeholder();
   }
 }
