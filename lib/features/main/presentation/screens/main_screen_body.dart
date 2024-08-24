@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 import 'package:rubber_app_bar/rubber_app_bar.dart';
 import 'package:shagra_club_app/core/constants/icon_assets.dart';
+import 'package:shagra_club_app/features/main/presentation/widgets/exit_show_dialogue.dart';
 
 import '../../../../core/constants/image_assets.dart';
 import '../../../../core/theme/colors.dart';
@@ -79,18 +80,19 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(
-                    Icons.notifications,
+                    Icons.notifications_active_outlined,
                     size: 25,
                     color: Colors.amberAccent,
                   ),
                 ),
                 IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.exit_to_app,
-                    size: 25,
-                    color: Colors.blueGrey,
-                  ),
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) => const ExitShowDialog(),
+                    );
+                  },
+                  icon: Image.asset(IconAssets.exit, height: 25.h),
                 ),
               ],
             ),

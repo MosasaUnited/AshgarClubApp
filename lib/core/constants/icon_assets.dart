@@ -13,5 +13,5 @@ class IconAssets {
       'assets/icons/tracking_deactive.png';
 
   // Exit Show Dialog
-  // static const String exit = 'assets/icons/exit_app.png';
+  static const String exit = 'assets/icons/exit_app.png';
 }
