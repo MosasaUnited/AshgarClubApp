@@ -6,6 +6,6 @@ class SportsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SportsScreenBody();
+    return const SingleChildScrollView(child: SportsScreenBody());
   }
 }
