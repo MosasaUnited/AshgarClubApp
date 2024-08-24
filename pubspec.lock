@@ -858,6 +858,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.0"
+  rubber_app_bar:
+    dependency: "direct main"
+    description:
+      name: rubber_app_bar
+      sha256: "03da5b740eeb076a0332118f51afaef215eb0f12d2bf7304878bb57207643d5e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   rxdart:
     dependency: transitive
     description:
