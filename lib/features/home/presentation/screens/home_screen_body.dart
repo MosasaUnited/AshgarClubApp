@@ -31,6 +31,9 @@ class HomeScreenBody extends StatelessWidget {
             height: 10.h,
           ),
           const CustomRatingBar(),
+          SizedBox(
+            height: 10.h,
+          ),
         ],
       ),
     );

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:shagra_club_app/core/theme/colors.dart';
 
 import '../../../../core/constants/image_assets.dart';
+import '../../../../core/routes/app_router.dart';
 import 'court_rich_text.dart';
 import 'courts_image_asset.dart';
 
@@ -16,7 +18,16 @@ class FootballCourt extends StatelessWidget {
       height: 200.h,
       child: InkWell(
         highlightColor: MyColors.appColor,
-        onTap: () {},
+        onTap: () {
+          Future.delayed(
+            const Duration(
+              microseconds: 1500,
+            ),
+            () {
+              GoRouter.of(context).push(AppRouter.kFootballCourt);
+            },
+          );
+        },
         child: const Card(
           color: Colors.transparent,
           clipBehavior: Clip.antiAlias,
