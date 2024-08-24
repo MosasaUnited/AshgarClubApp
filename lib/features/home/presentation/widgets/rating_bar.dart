@@ -36,6 +36,7 @@ class CustomRatingBar extends StatelessWidget {
               content: Center(
                 child: Text(
                   message!,
+                  textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white, fontSize: 15.sp),
                 ),
               ),

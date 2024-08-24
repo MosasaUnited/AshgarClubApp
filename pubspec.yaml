@@ -95,6 +95,9 @@ dependencies:
   # Rating
   flutter_rating_bar: ^4.0.1
 
+  # Segmented button with slider indicator
+  segmented_button_slide: ^2.0.0
+
 
 
 

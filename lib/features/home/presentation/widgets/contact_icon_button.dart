@@ -45,6 +45,7 @@ class ProfileIconButton extends StatelessWidget {
               const SnackBar(
                 content: Text(
                   'Not Found , Please Check The Url',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
                   ),

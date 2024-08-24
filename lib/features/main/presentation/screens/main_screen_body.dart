@@ -43,82 +43,85 @@ class _MainScreenBodyState extends State<MainScreenBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: RubberAppBar(
-        transitionCurve: Curves.ease,
-        height: 95,
-        maxExtent: 500,
-        mode: RubberAppBarMode.movementDirection,
-        builder: (extending) => Container(
-          height: double.infinity,
-          decoration: const BoxDecoration(
-            color: MyColors.appColor,
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(50),
-              bottomRight: Radius.circular(50),
+    return SafeArea(
+      child: Scaffold(
+        appBar: RubberAppBar(
+          transitionCurve: Curves.ease,
+          height: 95,
+          maxExtent: 500,
+          mode: RubberAppBarMode.movementDirection,
+          builder: (extending) => Container(
+            height: double.infinity,
+            decoration: const BoxDecoration(
+              color: MyColors.appColor,
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(50),
+                bottomRight: Radius.circular(50),
+              ),
             ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Image.asset(
-                  ImageAssets.appLogoImage,
-                  height: 70.h,
-                ),
-                const Spacer(),
-                Text(
-                  screenNames[controller?.index ?? 0],
-                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: Colors.white,
-                        fontSize: 32.sp,
-                        fontWeight: FontWeight.w900,
-                      ),
-                ),
-                const Spacer(),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.notifications_active_outlined,
-                    size: 25,
-                    color: Colors.amberAccent,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    ImageAssets.appLogoImage,
+                    height: 70.h,
                   ),
-                ),
-                IconButton(
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) => const ExitShowDialog(),
-                    );
-                  },
-                  icon: Image.asset(IconAssets.exit, height: 25.h),
-                ),
-              ],
+                  const Spacer(),
+                  Text(
+                    screenNames[controller?.index ?? 0],
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                          color: Colors.white,
+                          fontSize: 32.sp,
+                          fontWeight: FontWeight.w900,
+                        ),
+                  ),
+                  const Spacer(),
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.notifications_active_outlined,
+                      size: 25,
+                      color: Colors.amberAccent,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) =>
+                            const ExitShowDialog(),
+                      );
+                    },
+                    icon: Image.asset(IconAssets.exit, height: 25.h),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
-      ),
-      body: PersistentTabView(
-        context,
-        controller: controller,
-        navBarHeight: kSizeBottomNavigationBarHeight,
-        screens: _buildScreens(),
-        items: _navBarsItems(),
-        backgroundColor: MyColors.kColorBNBBackground,
-        handleAndroidBackButtonPress: true,
-        resizeToAvoidBottomInset: true,
-        stateManagement: true,
-        navBarStyle: NavBarStyle.style19,
-        onItemSelected: (final index) {
-          setState(
-            () {
-              controller?.index = index;
+        body: PersistentTabView(
+          context,
+          controller: controller,
+          navBarHeight: kSizeBottomNavigationBarHeight,
+          screens: _buildScreens(),
+          items: _navBarsItems(),
+          backgroundColor: MyColors.kColorBNBBackground,
+          handleAndroidBackButtonPress: true,
+          resizeToAvoidBottomInset: true,
+          stateManagement: true,
+          navBarStyle: NavBarStyle.style19,
+          onItemSelected: (final index) {
+            setState(
+              () {
+                controller?.index = index;
 
-              if (index == 1) {}
-            },
-          );
-        },
+                if (index == 1) {}
+              },
+            );
+          },
+        ),
       ),
     );
   }

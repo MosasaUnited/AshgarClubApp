@@ -23,7 +23,7 @@ class CustomShaderMaskText extends StatelessWidget {
         text,
         style: Theme.of(context).textTheme.titleMedium!.copyWith(
               color: Colors.white,
-              fontSize: 28.sp,
+              fontSize: 24.sp,
               fontWeight: FontWeight.w900,
             ),
       ),

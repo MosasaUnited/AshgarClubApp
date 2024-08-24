@@ -9,7 +9,7 @@ import '../widgets/contact_icon_button.dart';
 class ContactUsButtons extends StatelessWidget {
   const ContactUsButtons({super.key});
 
-  static const _contactLinks = [
+  static const contactLinks = [
     ContactLink(
       url: AppStrings.clubWhatsapp,
       iconAssetPath: IconAssets.whatsappIcon,
@@ -41,7 +41,7 @@ class ContactUsButtons extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          for (final link in _contactLinks)
+          for (final link in contactLinks)
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.h, vertical: 10.w),
               child: ProfileIconButton(link: link),
