@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shagra_club_app/core/di/dependency_injection.dart';
+import 'package:shagra_club_app/core/widgets/payment_widget.dart';
 import 'package:shagra_club_app/features/home/presentation/home_screen.dart';
 import 'package:shagra_club_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:shagra_club_app/features/main/presentation/main_screen.dart';
@@ -25,6 +26,8 @@ abstract class AppRouter {
   static const kFootballCourt = '/footballCourt';
   static const kSwimmingCourt = '/swimmingCourt';
   static const kTennisCourt = '/tennisCourt';
+  // Payment
+  static const kPaymentWidget = '/paymentWidget';
 
   static final router = GoRouter(
     routes: [
@@ -73,6 +76,11 @@ abstract class AppRouter {
       GoRoute(
         path: kTennisCourt,
         builder: (context, state) => const BookTennisCourt(),
+      ),
+      // Payment Widget
+      GoRoute(
+        path: kPaymentWidget,
+        builder: (context, state) => PaymentWidget(onClose: () {}),
       ),
     ],
   );

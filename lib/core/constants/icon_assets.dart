@@ -20,4 +20,8 @@ class IconAssets {
   static const String facebookIcon = 'assets/images/facebook.png';
   static const String instagramIcon = 'assets/images/instagram.png';
   static const String whatsappIcon = 'assets/images/whatsapp.png';
+//   Payment Icons
+
+  static const String fawryIcon = 'assets/icons/fawry.png';
+  static const String creditCardIcon = 'assets/icons/credit-card.png';
 }

@@ -98,6 +98,12 @@ dependencies:
   # Segmented button with slider indicator
   segmented_button_slide: ^2.0.0
 
+  # Handling With Credit Cards
+  flutter_credit_card: ^4.0.1
+
+  #Animations
+  flutter_animate: ^4.5.0
+
 
 
 
