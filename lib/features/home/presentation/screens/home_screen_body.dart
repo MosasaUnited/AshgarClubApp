@@ -16,7 +16,7 @@ class HomeScreenBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const CustomShaderMaskText(text: 'Events'),
+          const CustomShaderMaskText(text: 'Upcoming Events'),
           SizedBox(
             height: 8.h,
           ),
