@@ -9,6 +9,7 @@ class MyColors {
   static const Color myLightBlue = Color(0xff0666DF);
   static const Color myTeal = Color(0xff008080);
   static const Color myGreen = Color(0xff64BF75);
+  static const Color myBlueBlack = Color(0xff000050);
 
   // Bottom Navigation Bar Colors
 //Colors

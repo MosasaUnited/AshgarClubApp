@@ -6,6 +6,10 @@ class TrackingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const TrackingScreenBody();
+    return const TrackingScreenBody(
+      steps: 5000,
+      heartRate: 75,
+      calories: 300,
+    );
   }
 }
