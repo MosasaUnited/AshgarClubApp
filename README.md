@@ -2,11 +2,11 @@
 
 The ashgar club mobile app is a user-friendly platform designed to provide members with easy access to the club's benefits and services. It offers a convenient way to manage membership, reserve courts and pools, and make payments for various services.
 
-**[![WhatsApp_Image_2024-09-24_at_12 33 36_PM-removebg-preview](https://github.com/user-attachments/assets/5dc4b5d0-5f86-454e-ae3a-1f291427eb76)]** 
+**![WhatsApp_Image_2024-09-24_at_12 33 36_PM-removebg-preview](https://github.com/user-attachments/assets/5dc4b5d0-5f86-454e-ae3a-1f291427eb76)** 
 
 **Key Features**
 
-*Membership Management:*
+##*Membership Management:*
 
 * View membership details and expiration date.
 * Renew membership online.
