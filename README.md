@@ -4,7 +4,7 @@ The ashgar club mobile app is a user-friendly platform designed to provide membe
 
 **![WhatsApp_Image_2024-09-24_at_12 33 36_PM-removebg-preview](https://github.com/user-attachments/assets/5dc4b5d0-5f86-454e-ae3a-1f291427eb76)** 
 
-## Key Features
+# Key Features
 
 ### Membership Management:
 
