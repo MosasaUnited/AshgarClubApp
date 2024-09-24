@@ -4,6 +4,20 @@ The ashgar club mobile app is a user-friendly platform designed to provide membe
 
 **![WhatsApp_Image_2024-09-24_at_12 33 36_PM-removebg-preview](https://github.com/user-attachments/assets/5dc4b5d0-5f86-454e-ae3a-1f291427eb76)** 
 
+
+<img src="https://github.com/user-attachments/assets/94c86ffc-5c51-4e2f-908c-438f470fde57" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/a1999c23-bb31-4e7c-91c8-4e6f20dbc909" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/84ad02eb-4d9e-43c2-bd5e-e1b3ae2536fe" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/68455c33-40f9-4565-9a7b-2a47f14e6a20" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/d8f0b034-4d7b-497b-a8ee-cfa2b304e5b7" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/ca7e9514-ecce-4709-80a5-7b6b81c5c0fd" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/1180df77-4e9e-4fda-8431-a6d22be55aab" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/b8f0335d-a460-45c9-882f-4e559031c344" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/a12ea318-e70c-4411-8e55-ee05971cfda2" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/bc6241ce-a085-46ba-8dec-f31995b505d5" width="200" height="350">
+<img src="https://github.com/user-attachments/assets/79989f33-79b1-46ce-9f65-3e0ce2f123c0" width="200" height="350">
+
+
 # Key Features
 
 ### Membership Management:
