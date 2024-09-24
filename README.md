@@ -18,38 +18,38 @@ The ashgar club mobile app is a user-friendly platform designed to provide membe
 * Reserve desired timeslots.
 * Receive reminders for upcoming reservations.
 
-*Payment Methods:*
+### Payment Methods:
 
 * Secure online payment options.
 * Pay membership fees, court and pool reservation charges, and other services.
 
-*Club News and Events:*
+### Club News and Events:
 
 * Stay updated on club activities, events, and announcements.
 * Receive notifications about upcoming events.
 
-*Contact Information:*
+### Contact Information:
 
 * Easily contact club staff for inquiries or assistance.
 
-*Benefits for Users*
+### Benefits for Users
 
 * Convenience: Manage membership and reservations from the comfort of your smartphone.
 * Time-saving: Avoid long queues and manual processes.
 * Security: Enjoy secure online payment options.
 * Access to Exclusive Benefits: Take advantage of member-only perks and discounts.
 
-*Target Audience*
+### Target Audience
 
 * Members of the ashgar club.
 * Individuals interested in joining the club.
 
-*Technical Requirements*
+### Technical Requirements
 
 * Compatible with iOS and Android devices.
 * Requires a stable internet connection.
 
-*Future Enhancements*
+### Future Enhancements
 
 * Integration with fitness tracking apps.
 * Personalized recommendations based on user preferences.
