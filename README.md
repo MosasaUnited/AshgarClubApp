@@ -6,7 +6,7 @@ The ashgar club mobile app is a user-friendly platform designed to provide membe
 
 **Key Features**
 
-##*Membership Management:*##
+###*Membership Management:
 
 * View membership details and expiration date.
 * Renew membership online.
